@@ -29,14 +29,14 @@ groups:
       # La estación fabrica más de lo que se guarda en el último minuto
       - alert: RegistrosPerdidos
         expr: sum(increase(estacion_piezas_fabricadas_total[1m])) - sum(increase(archivador_registros_guardados_total[1m])) > 3
-        for: 10s
+        for: 70s
         labels: {severidad: critica}
         annotations:
           resumen: "Se fabrican carcasas que no llegan al histórico"
 
       # El husillo pasa del margen del procedimiento
       - alert: TemperaturaHusilloAlta
-        expr: estacion_temperatura_husillo_celsius > 70
+        expr: estacion_temperatura_husillo_celsius > 62.5
         for: 5s
         labels: {severidad: aviso}
         annotations:
