@@ -20,6 +20,8 @@ Si se repite, corregir la reconexión del archivador.
 
 La estación fabrica más carcasas de las que llegan al histórico.
 Acción: comprobar que el broker y el archivador están en marcha y que el archivador guarda. Conciliar la pérdida.
+Si la pérdida supera 30 carcasas, avisar a calidad: ese tramo no tendrá trazabilidad.
+
 
 ## EstacionCaida
 
